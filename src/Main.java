@@ -82,7 +82,66 @@ static void example2(){
 
     System.out.println("Thank you for your input");
 }
+static void example3(){
 
+    Object o = true;
+    o = 1;
+    o = 1.23;
+    o = new Car();
+
+
+}
+
+static void example4(){
+    /*
+        create an array of Car objects
+        //ask the user 3 times for Car values
+            color, make, model, price
+
+        THEN
+            output the color make model and price for EACH car object
+     */
+
+    Car[] cars = new Car[3];
+    Scanner input = new Scanner(System.in);
+    for(int i = 0; i < cars.length; i++){
+        System.out.println("Entering info for car #" + (i + 1));
+        //ask user for color, make, model, price
+        System.out.println("Enter car color");
+        String  color = input.nextLine();
+        System.out.println("Enter car make");
+        String  make = input.nextLine();
+        System.out.println("Enter car model");
+        String  model = input.nextLine();
+        System.out.println("Enter car price");
+        double price = input.nextDouble();
+        input.nextLine(); // consume nl char
+
+        //create an object at the specified index of cars array
+        cars[i] = new Car(color, make, model, price);
+    }
+    System.out.println("Here is the information that you entered");
+    //enhanced for == foreach loop in other language
+    //for(dataType placeholder : collectionOfValues)
+    for(Car currentCar : cars){
+        System.out.printf("Car color = %s, make = %s, model = %s, price = %.2f%n",
+                 currentCar.color, currentCar.make, currentCar.model, currentCar.getPrice()
+                );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
     void regularMethod(){}
     public static void main(String[] args) {
 
@@ -94,6 +153,6 @@ static void example2(){
         Main.example2();
 
      */
-        example2();
+        example4();
     }
 }

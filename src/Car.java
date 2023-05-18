@@ -105,6 +105,18 @@ public class Car {
     //right-click => Generate
 
 
+    public Car(String color, String model, String make, double price) {
+        this.color = color;
+        this.model = model;
+        this.make = make;
+        this.price = price;
+    }
+    public Car(String color, String make, String model) {
+        this(color, model, make, 0);
+    }
+    public Car(double price, String color,String make,  String model) {
+        this(color, model, make, price);
+    }
     public Car(String color, String model, String make, float horsePowerEngine, byte seats, byte doors, short year, double weight, double price, int kilometres) {
         this.color = color;
         this.model = model;
@@ -118,4 +130,6 @@ public class Car {
         this.kilometres = kilometres;
     }
     public Car(){}
+
+
 }
