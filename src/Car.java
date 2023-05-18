@@ -49,6 +49,7 @@ public class Car {
             this.horsePowerEngine = horsePowerEngine;
 
 
+
     }
 
     public byte getSeats() {
@@ -98,4 +99,23 @@ public class Car {
     public void setKilometres(int kilometres) {
         this.kilometres = kilometres;
     }
+
+
+    //atl+insert
+    //right-click => Generate
+
+
+    public Car(String color, String model, String make, float horsePowerEngine, byte seats, byte doors, short year, double weight, double price, int kilometres) {
+        this.color = color;
+        this.model = model;
+        this.make = make;
+        this.horsePowerEngine = horsePowerEngine;
+        this.seats = seats;
+        this.doors = doors;
+        this.year = year;
+        this.weight = weight;
+        this.price = price;
+        this.kilometres = kilometres;
+    }
+    public Car(){}
 }
