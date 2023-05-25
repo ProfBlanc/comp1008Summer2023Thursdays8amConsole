@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Week3 {
@@ -88,10 +89,112 @@ public class Week3 {
                 season, whatToWear);
 
     }
+
+    static void example4(){
+
+        byte age = 100;
+        /*
+        -128            127;
+         */
+        age = (byte) -130;
+        System.out.println(age);
+    }
+    static void example5(){
+
+        Calculator c = new Calculator();
+
+        byte num1 = 1, num2 = 2;
+//        double result = c.add(1, 2);
+        double result = c.add(num1, num2);
+        System.out.println(result);
+
+        int num5 = 100;  //int
+
+        byte num6 = (byte)num5;
+
+        /*
+            implicit typecasting
+                changing a smaller data type to a bigger one
+                float => double
+                byte => int
+                int => long
+                aka
+                    promotion
+        explicity
+            opposite of implicit
+                changing from bigger data type to smaller
+                aka demotion
+         */
+
+        //how do I pass two values
+        //for method (short, float)
+        double result2 = c.add( (short)5, (float)10   );
+
+        double result3 = c.add(1d, 2d);
+
+        double result4 = c.add(5f, 2L);
+    }
+    static void example6(){
+
+        System.out.println("Arrays");
+
+        //how to create arrays
+
+        String[] names = {"Ben", "Joe", "Mary"};
+
+        System.out.println("Names as " + names.length + " values");
+        System.out.println("First = " + names[0]);
+        System.out.println("Last = " + names[names.length - 1]);
+
+        String[] students = new String[3];
+
+        int[] nums = new int[3];
+
+        output(students);
+        System.out.println("*".repeat(20));
+        output(nums);
+    }
+
+    static void example7(){
+
+        /*
+                Row1Col1    Row1Col2    Row1Col3
+                Row2Col1    Row2Col2    Row2Col3
+                Row3Col1    Row3Col2    Row3Col3
+         */
+        String[][] data1 = new String[3][3];
+        data1[0][0] = "Row1Col1";
+        data1[0][1] = "Row1Col2";
+        data1[0][2] = "Row1Col3";
+
+        for(int row = 1; row < data1.length; row++){
+
+            for(int col = 0; col < data1[row].length; col++){
+                data1[row][col] = String.format("Row%dCol%d", row + 1, col + 1);
+            }
+
+        }
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(data1.length); // amount of rowss
+        output(data1[randomIndex]);
+
+        System.out.println("Done");
+    }
+    static void output(String[] arr){
+        for(String value : arr){
+            System.out.println(value);
+        }
+    }
+    static void output(int[] arr){
+        for(int value : arr){
+            System.out.println(value);
+        }
+    }
     void method1(){}
     public static void main(String[] args) {
 
-        example3();
+        example7();
 
 //        Week3 wk3 = new Week3();
 //        wk3.method1();
