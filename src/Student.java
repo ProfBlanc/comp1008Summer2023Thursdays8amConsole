@@ -1,5 +1,18 @@
-public class Student {
 
+/**
+ * This is the official documentation of this wonder Student class
+ * @author Ben Blanc
+ * @since 2023-06-08
+ * @version 1.0
+ */
+public class Student {
+/*  multiline comment. not visible outside class*/
+
+
+    /** This is a default instance variable */
+    double something;
+
+    /** String representing full name of Student object */
     private String name = "Student";
     private int age = 18;
     private double grade = 20;
@@ -30,10 +43,18 @@ public class Student {
                 '}';
     }
 
+    /**
+     * This is the getter of the name instance variable
+     * @return the value of the name instance variable
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Set the value of the name instance variable
+     * @param name String data that has at least 3 characters
+     */
     public void setName(String name) {
         if(name.length() >= 3){
             this.name = name;
@@ -63,6 +84,14 @@ public class Student {
     public static Student honorRollStudent(){
         return new Student("Honor Roll", 19, 80d);
     }
+
+    /**
+     * Create Honor Roll Student object and set name, age * grade at same time. Enforces grade 80+
+     * @param name Student name. At least 3 chars
+     * @param age Student age. Between 0 and 110 (inclusive)
+     * @param grade Student grade. Between 20 and 100 (inclusive)
+     * @return a new Student object. E
+     */
     public static Student honorRollStudent(String name, int age, double grade){
 
         /*
