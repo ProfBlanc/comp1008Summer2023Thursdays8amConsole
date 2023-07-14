@@ -1,0 +1,62 @@
+
+
+Create an interface
+	External Component of a bigger object
+		Paws
+Abstract class
+	Canine
+
+
+
+
+Barrie 		has its own laws
+		bylaws
+Ontario		has its own laws
+		provincial laws
+Canada
+		has its own laws
+		federal laws
+
+
+How many methods are called to run our
+example7
+	5
+	first method called?
+		main
+		example7
+		total
+			5f, "hello world"
+			getValueRange
+			checkDataLength
+			IllegalArgument
+
+pile of dishes
+Person 3
+Person 2
+Person 1
+
+Person 1 finishes first
+Person 2 finishes next
+Person 3 finishes last
+
+
+
+
+
+Canine: animal group: abstract class
+	why abstract? category/group.
+	does not exist by itself but inner part of
+	dogs, wolves, etc
+Paws: interface: define actions of a paw
+	why interface: located on outside
+
+
+
+Barrie 		has its own laws
+		bylaws
+Ontario		has its own laws
+		provincial laws
+Canada
+		has its own laws
+		federal laws
+
